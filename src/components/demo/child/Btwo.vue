@@ -12,15 +12,14 @@
 		name: 'Btwo',
 		computed: {
 			score() {
-				return this.$store.state.score;
+				return this.$store.state.score.score;
 			},
 			price() {
-				return this.$store.state.price;
+				return this.$store.state.price.price;
 			}
 		},
 		methods: {
 			getVIPPrice() {
-				console.log(this.score);
 				this.$store.commit({
 					type: 'getVIPPrice',
 					score: this.score
@@ -29,7 +28,7 @@
 			returnPrice() {
 				// 价格
 				this.$store.dispatch({
-					type: 'getPrice',
+					type: 'getAsyncPrice',
 					foodId: 201701
 				});
 				

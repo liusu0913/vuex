@@ -10,7 +10,8 @@
 		name: 'bTwo',
 		computed: {
 			count() {
-				return this.$store.state.count;
+				return this.$store.state.add.count;
+				// return this.$store.state.count;
 			}
 		},
 		methods: {

@@ -15,10 +15,14 @@
 		name: 'bOne',
 		computed: {
 			count() {
-				return this.$store.state.count;
+				// 模块化之后，回去数据要加上模块的名字这里是add
+				// console.log(this.$store);
+				return this.$store.state.add.count;
+				// return this.$store.state.count;
 			},
 			// food的数据的获取，利用store的getters筛选获取
 			foods() {
+				//  模块化因为所有的模块只有一个getters这里不用加模块名字
 				// console.log(this.$store.getters.filterFuite);
 				return this.$store.getters.filterFuite;
 			}
