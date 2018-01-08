@@ -19,7 +19,7 @@
 			},
 			// food的数据的获取，利用store的getters筛选获取
 			foods() {
-				console.log(this.$store.getters.filterFuite);
+				// console.log(this.$store.getters.filterFuite);
 				return this.$store.getters.filterFuite;
 			}
 		},
