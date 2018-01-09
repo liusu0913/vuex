@@ -22,7 +22,7 @@
 			},
 			// food的数据的获取，利用store的getters筛选获取
 			foods() {
-				//  模块化因为所有的模块只有一个getters这里不用加模块名字
+				//  模块化只有用到state的属性是才会加上模块化的名字，其他的不加
 				// console.log(this.$store.getters.filterFuite);
 				return this.$store.getters.filterFuite;
 			}
